@@ -9,7 +9,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// import authRoutes from "./routes/auth.js";
+import authRoutes from "./routes/auth.js";
 import { register } from "./controllers/auth.js";
 
 /* CONFIGURATIONS / MIDDLEWHEAR */
@@ -43,6 +43,9 @@ app.post(
     upload.single("picture"), // middleware
     register // controler / endpoint
 );
+
+/* Routes */
+app.use("/auth", authRoutes); // this will be 'auth/login' with 'router.post("/login", login)' in auth.js
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 3303;
