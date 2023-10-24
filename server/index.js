@@ -70,7 +70,7 @@ mongoose
             console.log(`Server has launch on port -------> ${PORT}`)
         );
 
-        /* ADD DATA ONE TIME */
+        /* ADD DATA ONLY ONE TIME */
         // User.insertMany(users);
         // Post.insertMany(posts);
     })
