@@ -9,3 +9,6 @@ For jsconfig.json,
 
 when import file into other file, it starts from src
 // --------------------------------
+
+REDUX
+begin at hr-1:55 (state/index.js)
