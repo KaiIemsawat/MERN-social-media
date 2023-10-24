@@ -1,0 +1,11 @@
+For jsconfig.json,
+
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "include": ["src"]
+}
+
+when import file into other file, it starts from src
+// --------------------------------
