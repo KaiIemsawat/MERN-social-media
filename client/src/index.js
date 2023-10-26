@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 
 // from 'redux-persist' only
 // To store information in local storage not as session.
+// the only way to get rid of the info is to clear the cache
 import {
     persistStore,
     persistReducer,

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"; // To create slice
 
 // this state will be store in global state.
 // So, this data will be accessible throughout the entire application
@@ -24,7 +24,7 @@ export const authSlice = createSlice({
             // In this case, we switch between 'light' and 'dark' when conditions met. (Assign new value to 'state.mode')
         },
         setLogin: (state, action) => {
-            // 'action' is payload. Basically, it's params or arguments forthe function
+            // 'action' is payload. Basically, it's params or arguments for the function
             state.user = action.payload.user;
             state.token = action.payload.token;
         },
@@ -54,6 +54,9 @@ export const authSlice = createSlice({
     },
 });
 
+// Then we need to export each (so called) reducer inside the 'reducers: {}'
 export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
     authSlice.actions;
+
+// Finally, expoer default authSlice.reducer;
 export default authSlice.reducer;

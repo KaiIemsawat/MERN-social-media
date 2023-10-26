@@ -43,8 +43,8 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt;
 
-    // const fullName = `${user.firstName} ${user.lastName}`;
-    const fullName = `Zukkii Hampton`;
+    const fullName = `${user.firstName} ${user.lastName}`;
+    // const fullName = `Zukkii Hampton`; // temporary use!!
 
     return (
         <FlexBetween

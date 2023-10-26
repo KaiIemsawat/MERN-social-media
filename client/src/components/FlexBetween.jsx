@@ -10,3 +10,10 @@ const FlexBetween = styled(Box)({
 });
 
 export default FlexBetween;
+
+// Notes :
+// 'styled(Box)' <- 'box' allows us to pass any type of css property and use it as component property
+// Much like 'padding' and 'backgroundColor' from the tag below in 'navbar/index.jsx'
+{
+    /* <FlexBetween padding="1rem 6%" backgroundColor={alt}>Navbar</FlexBetween> */
+}
