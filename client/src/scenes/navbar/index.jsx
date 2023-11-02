@@ -8,9 +8,9 @@ import {
     MenuItem,
     FormControl,
     useTheme,
-    // 'useThem' allows us to go back to 'theme.js' file then use any color that was set
+    // 'useTheme' allows us to go back to 'theme.js' file then use any color that was set
     useMediaQuery,
-    // 'useMediaQuery' mui buildin hook. Used to determine if the user screen size is below or above this min-width
+    // 'useMediaQuery' mui build-in hook. Used to determine if the user screen size is below or above this min-width
 } from "@mui/material";
 import {
     Search,
@@ -36,6 +36,7 @@ const Navbar = () => {
 
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
+    // Themes
     const theme = useTheme();
     const neutralLight = theme.palette.neutral.light;
     const dark = theme.palette.neutral.dark;
@@ -56,6 +57,7 @@ const Navbar = () => {
                 <Typography
                     fontWeight="bold"
                     fontSize="clamp(1rem, 2rem, 2.25rem)"
+                    // properties for clamp(min, prefered, max), useful for fonts or width/gap
                     color="primary"
                     onClick={() => navigate("/home")}
                     sx={{
@@ -81,6 +83,7 @@ const Navbar = () => {
                     </FlexBetween>
                 )}
             </FlexBetween>
+
             {/* DESKTOP NAV */}
             {isNonMobileScreens ? (
                 <FlexBetween gap="2rem">
@@ -128,6 +131,7 @@ const Navbar = () => {
                     <Menu />
                 </IconButton>
             )}
+
             {/* MOBILE NAV */}
             {!isNonMobileScreens && isMobileMenuToggled && (
                 <Box
@@ -150,6 +154,7 @@ const Navbar = () => {
                             <Close />
                         </IconButton>
                     </Box>
+
                     {/* MENU ITEMS */}
                     <FlexBetween
                         display="flex"

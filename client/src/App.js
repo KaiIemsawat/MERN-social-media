@@ -9,6 +9,7 @@ import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 
 function App() {
+    // Much like boilerplate here (next 2 lines)
     const mode = useSelector((state) => state.mode); // This will grab the value from 'state/index.js'. initialState -> mode
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 

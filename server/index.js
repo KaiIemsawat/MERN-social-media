@@ -48,12 +48,18 @@ const upload = multer({ storage });
 /* ROUTES WITH FILE */
 app.post(
     "/auth/register",
-    upload.single("picture"), // middleware
+    upload.single("picture"), // middleware // 'picture' could be any string value but needs to match with frontend property
     register // controler / endpoint
 );
-app.post("/posts", verifyToken, upload.single("picture"), createPost);
+app.post(
+    "/posts",
+    verifyToken, // middleware
+    upload.single("picture"),
+    createPost
+);
 
 /* ROUTES */
+// There will be additional endpoints following
 app.use("/auth", authRoutes); // this will be 'auth/login' with 'router.post("/login", login)' in auth.js
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
@@ -67,7 +73,7 @@ mongoose
     })
     .then(() => {
         app.listen(PORT, () =>
-            console.log(`Server has launch on port -------> ${PORT}`)
+            console.log(`Server has launched on port ______ ${PORT}`)
         );
 
         /* ADD DATA ONLY ONE TIME */

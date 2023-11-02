@@ -15,8 +15,7 @@ export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        // reducers -> actions
-        // Basically, these are functions
+        // reducers -> actions. Basically, these are functions
         setMode: (state) => {
             state.mode = state.mode === "light" ? "dark" : "light";
             // NOTE. 'Redux' can't assign new value as the line above. This is 'Redux/Toolkit'

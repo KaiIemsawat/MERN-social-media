@@ -5,7 +5,7 @@ import User from "../models/User.js";
 /* REGISTER USER */
 export const register = async (req, res) => {
     try {
-        // destructure req.body
+        // destructure (grab data from) req.body
         const {
             firstName,
             lastName,
@@ -17,6 +17,7 @@ export const register = async (req, res) => {
             occupatoin,
         } = req.body;
 
+        // Hashing password
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, salt);
 

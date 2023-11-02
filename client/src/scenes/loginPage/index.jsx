@@ -1,4 +1,5 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+// import Form from "./Form";
 
 const LoginPage = () => {
     const theme = useTheme();
@@ -21,7 +22,11 @@ const LoginPage = () => {
                 m="2rem auto"
                 borderRadius="1.5rem"
                 backgroundColor={theme.palette.background.alt}
-            ></Box>
+            >
+                <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
+                    Welcome to Socialpedia, the Social Media for Sociopaths!
+                </Typography>
+            </Box>
         </Box>
     );
 };
